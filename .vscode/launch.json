@@ -7,8 +7,15 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/bin/www"
+            "runtimeExecutable": "nodemon",
+            "name": "Debug Launch",
+            "program": "${workspaceFolder}/bin/www",
+            "restart": true,
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
         }
     ]
 }
