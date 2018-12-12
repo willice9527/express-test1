@@ -13,6 +13,6 @@ block content
             else
                 span.text-warning #{bk.status} 
             if bk.status!='Available'
-                span  (Due: #{bk.due_back} )
+                span  (Due: #{bk.due_back_formatted} )
     else
         li no book copy.
