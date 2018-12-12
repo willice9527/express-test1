@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1=title
+    ul 
+    each bk in book_list
+        li 
+            a(href=bk.url) #{bk.book.title} : #{bk.imprint} -
+            if bk.status=='Available'
+                span.text-success #{bk.status}
+            else if bk.status=='Maintenance'
+                span.text-danger #{bk.status}
+            else
+                span.text-warning #{bk.status} 
+            if bk.status!='Available'
+                span  (Due: #{bk.due_back} )
+    else
+        li no book copy.

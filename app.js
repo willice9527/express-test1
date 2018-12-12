@@ -36,6 +36,8 @@ app.use('/catalog', catalogRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  console.log(req);
+  console.log(res);
   next(createError(404));
 });
 
@@ -47,6 +49,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
+  if (err) {console.log(err);}
   res.render('error');
 });
 

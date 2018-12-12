@@ -7,11 +7,11 @@
         {
             "type": "node",
             "request": "launch",
-            "runtimeExecutable": "nodemon",
+            // "runtimeExecutable": "nodemon",
             "name": "Debug Launch",
             "program": "${workspaceFolder}/bin/www",
-            "restart": true,
-            "console": "integratedTerminal",
+            // "restart": true,
+            // "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
                 "<node_internals>/**/*.js"
