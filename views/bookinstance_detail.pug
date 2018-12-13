@@ -1,0 +1,19 @@
+extends layout
+block content
+
+    h1 ID: #{bookins._id}
+
+    p #[strong Title:]
+        a(href=bookins.book.url) #{bookins.book.title}
+    p #[strong Imprint:] #{bookins.imprint}
+
+    p #[strong Status:] 
+        if bookins.status=='Available'
+            span.text-success #{bookins.status}
+        else if bookins.status=='Maintenance'
+            span.text-danger #{bookins.status}
+        else
+            span.text-warning #{bookins.status} 
+      
+    if bookins.status!='Available'
+        p #[strong Due back:] #{bookins.due_back_formatted}
